@@ -2,81 +2,92 @@
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jadidlarim uchun</title>
 
 <style>
 body {
-    font-family: Arial;
     margin: 0;
-    background: linear-gradient(to right, #141e30, #243b55);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
 }
 
 /* Header */
 header {
     text-align: center;
-    padding: 20px;
-    font-size: 28px;
-    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 /* Menu */
 nav {
     text-align: center;
-    background: #111;
-    padding: 10px;
+    margin-bottom: 20px;
 }
 
-nav button {
-    background: #2a5298;
-    border: none;
+nav a {
+    text-decoration: none;
     color: white;
+    background: #2a5298;
     padding: 12px 20px;
     margin: 5px;
-    cursor: pointer;
     border-radius: 10px;
-    font-size: 16px;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-nav button:hover {
+nav a:hover {
     background: #00c6ff;
+    transform: scale(1.1);
 }
 
-/* Sections */
-.section {
-    display: none;
-    padding: 30px;
+/* Hero */
+.hero {
     text-align: center;
+    padding: 50px 20px;
 }
 
-.active {
-    display: block;
+.hero h1 {
+    font-size: 40px;
 }
 
-textarea {
-    width: 80%;
-    height: 100px;
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;
 }
 
-input {
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    width: 200px;
+/* Cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
+.card {
+    background: white;
+    color: black;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    margin-top: 20px;
+}
 </style>
-
-<script>
-function showSection(id) {
-    let sections = document.querySelectorAll('.section');
-    sections.forEach(sec => sec.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-}
-</script>
 
 </head>
 
@@ -87,40 +98,44 @@ function showSection(id) {
 </header>
 
 <nav>
-<button onclick="showSection('jadidlar')">Jadidlar haqida</button>
-<button onclick="showSection('jadidchilik')">Jadidchilik nima?</button>
-<button onclick="showSection('status')">Statuslar</button>
-<button onclick="showSection('aloqa')">Fikr-mulohaza</button>
+<a href="jadidlar.html">Jadidlar haqida</a>
+<a href="jadidchilik.html">Jadidchilik</a>
+<a href="status.html">Statuslar</a>
+<a href="aloqa.html">Aloqa</a>
 </nav>
 
-<!-- 1 -->
-<div id="jadidlar" class="section active">
-<h2>Jadidlar haqida ma'lumot</h2>
-<p>Jadidlar — xalqni ilmli qilish, jamiyatni rivojlantirish uchun kurashgan ma'rifatparvar insonlar.</p>
+<div class="hero">
+<h1>Jadidlar merosi</h1>
+<p>Ma'rifat, ilm va taraqqiyot yo‘lida xizmat qilgan buyuk insonlar</p>
 </div>
 
-<!-- 2 -->
-<div id="jadidchilik" class="section">
-<h2>Jadid va Jadidchilik nima?</h2>
-<p>Jadid — yangilik tarafdori degani. Jadidchilik esa jamiyatni isloh qilish harakati.</p>
+<div class="container">
+
+<div class="card">
+<h3>Jadidlar</h3>
+<p>Mashhur jadidlar haqida ma'lumotlar</p>
 </div>
 
-<!-- 3 -->
-<div id="status" class="section">
-<h2>Statuslar _obidovkuu_</h2>
-<p>Ilm — najot yo‘li.</p>
-<p>Kelajak — bilimli yoshlar qo‘lida.</p>
+<div class="card">
+<h3>Jadidchilik</h3>
+<p>Harakat va uning ahamiyati</p>
 </div>
 
-<!-- 4 -->
-<div id="aloqa" class="section">
-<h2>Biz bilan bog‘lanish</h2>
-
-<input type="text" placeholder="Ismingiz"><br><br>
-<textarea placeholder="Fikringiz..."></textarea><br><br>
-
-<button>Yuborish</button>
+<div class="card">
+<h3>Statuslar</h3>
+<p>Ilhomlantiruvchi iqtiboslar</p>
 </div>
+
+<div class="card">
+<h3>Aloqa</h3>
+<p>Biz bilan bog‘lanish</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 | _obidovkuu_
+</footer>
 
 </body>
 </html>
