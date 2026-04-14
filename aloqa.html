@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aloqa</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    padding: 12px 20px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00ffcc;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+📩 Biz bilan bog‘lanish
+</header>
+
+<a href="index.html">⬅ Bosh sahifa</a>
+
+<form action="https://formsubmit.co/fuchun020@gmail.com" method="POST">
+
+<input type="text" name="name" placeholder="Ismingiz" required>
+
+<input type="email" name="email" placeholder="Emailingiz" required>
+
+<textarea name="message" placeholder="Xabaringiz..." required></textarea>
+
+<button type="submit">Yuborish</button>
+
+</form>
+
+</body>
+</html>
